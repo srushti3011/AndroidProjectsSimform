@@ -13,6 +13,45 @@
         android:theme="@style/Theme.LearningProject"
         tools:targetApi="31">
         <activity
+            android:name=".StateListDrawableActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TabbarLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NavigationComponentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AppBarCustomizationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintChainAndGroupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CircularConstraintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FrameLayoutPractice"
+            android:exported="false" />
+        <activity
+            android:name=".AppBarLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RelativeLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AbsoluteLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LinearLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LayoutsHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintLayoutActivity"
+            android:exported="false" />
+        <activity
             android:name=".CustomToastActivity"
             android:exported="false" />
         <activity
