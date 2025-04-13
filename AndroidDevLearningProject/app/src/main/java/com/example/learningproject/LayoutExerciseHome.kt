@@ -1,21 +1,21 @@
 package com.example.learningproject
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.learningproject.databinding.ActivityMainBinding
+import com.example.learningproject.databinding.ActivityLayoutExerciseHomeBinding
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+class LayoutExerciseHome : AppCompatActivity() {
+
+    private lateinit var binding: ActivityLayoutExerciseHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityLayoutExerciseHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -23,18 +23,13 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        binding.btnGoToWidgets.setOnClickListener {
-            val intent = Intent(this, WidgetsHomeActivity::class.java)
+        binding.btnGoToExerciseLogin.setOnClickListener {
+            val intent = Intent(this, LayoutExerciseLoginActivity::class.java)
             startActivity(intent)
         }
 
-        binding.btnGoToLayouts.setOnClickListener {
-            val intent = Intent(this, LayoutsHomeActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnGoToLayoutExercise.setOnClickListener {
-            val intent = Intent(this, LayoutExerciseHome::class.java)
+        binding.btnGoToExerciseSignup.setOnClickListener {
+            val intent = Intent(this, LayoutExerciseSignupActivity::class.java)
             startActivity(intent)
         }
     }
