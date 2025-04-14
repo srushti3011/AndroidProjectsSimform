@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">LearningProject</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="exercise_screen_heading">Enter feedback details to send to the developer:</string>
+    <string name="exercise_name_field_hint">Your name</string>
+    <string name="exercise_email_field_hint">Your email</string>
+    <string name="exercise_feedback_field_hint">Feedback Details...</string>
+    <string name="exercise_checkbox_content">Would you like an email response?</string>
+    <string name="exercise_button_content">Send Feedback</string>
 </resources>
