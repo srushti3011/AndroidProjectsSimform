@@ -37,5 +37,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, LayoutExerciseHome::class.java)
             startActivity(intent)
         }
+
+        binding.btnGoToDataBindingPractice.setOnClickListener {
+            val intent = Intent(this, DataBindingPracticeActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
