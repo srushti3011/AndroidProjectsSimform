@@ -42,5 +42,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, DataBindingPracticeActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnGoToWidgetsExercise.setOnClickListener {
+            val intent = Intent(this, WidgetsExerciseActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
