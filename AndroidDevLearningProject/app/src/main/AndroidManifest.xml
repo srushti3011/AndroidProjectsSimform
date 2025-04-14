@@ -13,6 +13,15 @@
         android:theme="@style/Theme.LearningProject"
         tools:targetApi="31">
         <activity
+            android:name=".LayoutExerciseSignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LayoutExerciseHome"
+            android:exported="false" />
+        <activity
+            android:name=".LayoutExerciseLoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".StateListDrawableActivity"
             android:exported="false" />
         <activity
