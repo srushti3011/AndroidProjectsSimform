@@ -15,4 +15,6 @@
     <color name="layout_exe_subheading">#7C7C7C</color>
     <color name="layout_exe_inputBottomBorder">#E2E2E2</color>
     <color name="layout_exe_forgotPasswordColor">#181725</color>
+    <color name="custom_primary">#D00135</color>
+    <color name="custom_primary_variant">#FA89A6</color>
 </resources>
