@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".WidgetsOneActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/normalButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="40dp"
+        android:background="@color/light_gray"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/imageButtonFirst"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="40dp"
+        android:background="@color/black"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/normalButton" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="40dp"
+        android:text="Select Hobbies"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonFirst" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chkBoxTravelling"
+        style="@style/CustomCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/buttonborder"
+        android:text="Travelling"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatTextView4"
+        app:layout_constraintStart_toStartOf="@+id/appCompatTextView4"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView4" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chkBoxReading"
+        style="@style/CustomCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonborder"
+        android:text="Reading"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatTextView4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/appCompatTextView4"
+        app:layout_constraintTop_toBottomOf="@+id/chkBoxTravelling" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chkBoxSinging"
+        style="@style/CustomCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonborder"
+        android:text="Singing"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatTextView4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/appCompatTextView4"
+        app:layout_constraintTop_toBottomOf="@+id/chkBoxReading" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/selectedItems"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="You have selected:"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/chkBoxSinging"
+        app:layout_constraintStart_toStartOf="@+id/chkBoxSinging"
+        app:layout_constraintTop_toBottomOf="@+id/chkBoxSinging" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="40dp"
+        android:text="Turn on/off"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectedItems"
+        android:textColor="@color/black"/>
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/btnBluetoothToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/appCompatTextView5"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView5"
+        android:background="@color/yellow"
+        android:textColor="@color/blue" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Switch button"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatTextView5"
+        app:layout_constraintStart_toStartOf="@+id/appCompatTextView5"
+        app:layout_constraintTop_toBottomOf="@+id/btnBluetoothToggle" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/appCompatTextView6"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView6"
+        app:thumbTint="@color/blue"
+        app:trackTint="@color/yellow"
+        android:text="Ok"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/textSelectLevelOfStudy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchButton"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:textColor="@color/black"
+        android:text="Select highest level of education:"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupLevelOfStudy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSelectLevelOfStudy"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radioBtnDiploma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Diploma"
+            android:textColor="@color/black"
+            style="@style/CustomRadioButton"
+            android:background="@drawable/buttonborder"/>
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radioBtnGraduate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Graduate"
+            android:textColor="@color/black"
+            style="@style/CustomRadioButton"
+            android:background="@drawable/buttonborder" />
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radioBtnPostGraduate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Post Graduate"
+            android:textColor="@color/black"
+            style="@style/CustomRadioButton"
+            android:background="@drawable/buttonborder"/>
+    </RadioGroup>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatButtonCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/baseline_call_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp"
+        app:fabSize="normal"
+        app:rippleColor="@color/yellow"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
