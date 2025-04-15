@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WidgetsHomeActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToWidgetsOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Widgets one"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToCustomSnackBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnGoToWidgetsOne"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="CustomSnackBar"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToTextViews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToCustomSnackBar"
+                android:text="Text Views"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:background="@color/light_gray" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToSearchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToTextViews"
+                android:text="Search View"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:background="@color/light_gray" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToMaterialViews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToSearchView"
+                android:text="Material Views"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:background="@color/light_gray" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToEditTextTypes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToMaterialViews"
+                android:text="Edit Text Types"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:background="@color/light_gray" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToCustomToast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToEditTextTypes"
+                android:text="Custom Toast"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:background="@color/light_gray" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
