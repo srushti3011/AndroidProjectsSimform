@@ -91,5 +91,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, BottomNavigationActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnGoToListRecyclerExercise.setOnClickListener {
+            val intent = Intent(this, ListRecyclerExerciseHomeActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

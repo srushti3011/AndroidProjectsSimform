@@ -7,4 +7,6 @@
     <string name="exercise_feedback_field_hint">Feedback Details...</string>
     <string name="exercise_checkbox_content">Would you like an email response?</string>
     <string name="exercise_button_content">Send Feedback</string>
+    <string name="title">Title</string>
+    <string name="subtitle">Subtitle</string>
 </resources>
