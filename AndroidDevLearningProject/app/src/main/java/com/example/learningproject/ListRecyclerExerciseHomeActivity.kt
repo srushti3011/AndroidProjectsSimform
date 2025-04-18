@@ -46,5 +46,10 @@ class ListRecyclerExerciseHomeActivity : AppCompatActivity() {
             val intent = Intent(this, BottomNavigationExercise::class.java)
             startActivity(intent)
         }
+
+        binding.btnGoToExpandableListViewExercise.setOnClickListener {
+            val intent = Intent(this, ExpandableListViewExerciseActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
