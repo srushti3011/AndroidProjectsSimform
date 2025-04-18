@@ -32,5 +32,10 @@ class ListRecyclerExerciseHomeActivity : AppCompatActivity() {
             val intent = Intent(this, RecyclerViewExerciseActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnGoToRecyclerViewGridManager.setOnClickListener {
+            val intent = Intent(this, RecyclerViewItemDecorationGridExercise::class.java)
+            startActivity(intent)
+        }
     }
 }
