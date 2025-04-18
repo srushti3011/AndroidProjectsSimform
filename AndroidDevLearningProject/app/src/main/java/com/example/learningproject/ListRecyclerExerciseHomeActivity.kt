@@ -37,5 +37,10 @@ class ListRecyclerExerciseHomeActivity : AppCompatActivity() {
             val intent = Intent(this, RecyclerViewItemDecorationGridExercise::class.java)
             startActivity(intent)
         }
+
+        binding.btnGoToTabViewPagerExercise.setOnClickListener {
+            val intent = Intent(this, ViewPagerWithTabExerciseActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
