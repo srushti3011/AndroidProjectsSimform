@@ -42,5 +42,9 @@ class ListRecyclerExerciseHomeActivity : AppCompatActivity() {
             val intent = Intent(this, ViewPagerWithTabExerciseActivity::class.java)
             startActivity(intent)
         }
+        binding.btnGoToBottomNavExercise.setOnClickListener {
+            val intent = Intent(this, BottomNavigationExercise::class.java)
+            startActivity(intent)
+        }
     }
 }
