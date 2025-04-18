@@ -89,6 +89,131 @@
                 android:textAllCaps="false"
                 android:text="Go To widgets exercise"/>
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToListViewPractice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToWidgetsExercise"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go To List View Practice"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToRecyclerViewPractice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToListViewPractice"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go To Recycler View Practice"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToChatRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToRecyclerViewPractice"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go To Chat Recycler View Practice"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToExpandableListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToChatRecyclerView"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go To Expandable List View Practice"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToExpandableRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToExpandableListView"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go To Expandable Recycler View Practice"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToRecycledViewPool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToExpandableRecyclerView"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go To Recycled View Pool"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToDiffUtil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToRecycledViewPool"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go To Diff Util"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToDiffUtil"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go To ViewPager Practice"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBottomNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToViewPager"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go To Bottom Navigation"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

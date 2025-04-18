@@ -1,7 +1,6 @@
 package com.example.learningproject
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -45,6 +44,51 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnGoToWidgetsExercise.setOnClickListener {
             val intent = Intent(this, WidgetsExerciseActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnGoToListViewPractice.setOnClickListener {
+            val intent = Intent(this, ListViewPracticeActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnGoToRecyclerViewPractice.setOnClickListener {
+            val intent = Intent(this, RecyclerViewPracticeActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnGoToChatRecyclerView.setOnClickListener {
+            val intent = Intent(this, ChatRecyclerViewActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnGoToExpandableListView.setOnClickListener {
+            val intent = Intent(this, ExpandableListViewActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnGoToExpandableRecyclerView.setOnClickListener {
+            val intent = Intent(this, ExpandableRecyclerViewActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnGoToRecycledViewPool.setOnClickListener {
+            val intent = Intent(this, RecycledViewPoolActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnGoToDiffUtil.setOnClickListener {
+            val intent = Intent(this, DiffUtilsPracticeActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnGoToViewPager.setOnClickListener {
+            val intent = Intent(this, ViewPagerHomeActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnBottomNavigation.setOnClickListener {
+            val intent = Intent(this, BottomNavigationActivity::class.java)
             startActivity(intent)
         }
     }
