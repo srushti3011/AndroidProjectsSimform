@@ -16,4 +16,13 @@
         <item name="android:color">@color/white</item>
         <item name="android:textColor">@color/black</item>
     </style>
+    <style name="App.Custom.Heading" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="App.Custom.SubHeading" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
 </resources>
