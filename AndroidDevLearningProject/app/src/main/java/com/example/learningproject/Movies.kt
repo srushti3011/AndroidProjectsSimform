@@ -6,3 +6,7 @@ data class Movies(
     var isVisible: Boolean = false
 )
 
+data class MoviesForList(
+    val name: String,
+    val description: Array<String>
+)
