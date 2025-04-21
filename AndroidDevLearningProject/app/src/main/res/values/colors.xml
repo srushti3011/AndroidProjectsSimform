@@ -17,4 +17,10 @@
     <color name="layout_exe_forgotPasswordColor">#181725</color>
     <color name="custom_primary">#D00135</color>
     <color name="custom_primary_variant">#FA89A6</color>
+    <color name="whatsapp_green">#118771</color>
+    <color name="gray">#8C8C8C</color>
+    <color name="whatsapp_blue">#D8D8E5</color>
+    <color name="chat_blue">#1184E1</color>
+    <color name="sent_msg">#D8F5C0</color>
+    <color name="received_msg">#F9F9F9</color>
 </resources>
