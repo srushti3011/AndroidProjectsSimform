@@ -13,6 +13,45 @@
         android:theme="@style/Theme.LearningProject"
         tools:targetApi="31">
         <activity
+            android:name=".BottomNavigationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewPagerRecyclerAdapterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewPagerTabLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentViewPagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewPagerHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DiffUtilsPracticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecycledViewPoolActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExpandableRecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExpandableListViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatRecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecyclerViewPracticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListViewPracticeActivity"
+            android:exported="false" />
+        <activity
             android:name=".WidgetsExerciseActivity"
             android:exported="false" />
         <activity
