@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="fragmentOne"
+        android:id="@+id/goToFragOne"
+        android:icon="@drawable/whatsapp_microphone"/>
+    <item android:title="fragmentTwo"
+        android:id="@+id/goToFragTwo"
+        android:icon="@drawable/arrow_next" />
+    <item android:title="fragmentThree"
+        android:id="@+id/goToFragThree"
+        android:icon="@drawable/location_icon" />
+<!--    <item android:title="fragmentFour"-->
+<!--        android:id="@+id/fragmentFour"-->
+<!--        android:icon="@drawable/location_icon" />-->
+<!--    <item android:title="fragmentFive"-->
+<!--        android:id="@+id/fragmentFive"-->
+<!--        android:icon="@drawable/location_icon" />-->
+<!--    <item android:title="fragmentSix"-->
+<!--        android:id="@+id/fragmentSix"-->
+<!--        android:icon="@drawable/location_icon" />-->
+<!--    <item android:title="fragmentSeven"-->
+<!--        android:id="@+id/fragmentSeven"-->
+<!--        android:icon="@drawable/location_icon" />-->
+</menu>

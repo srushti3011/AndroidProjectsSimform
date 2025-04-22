@@ -11,6 +11,130 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LearningProject"
-        tools:targetApi="31" />
+        tools:targetApi="31">
+        <activity
+            android:name=".BottomNavigationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewPagerRecyclerAdapterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewPagerTabLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentViewPagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewPagerHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DiffUtilsPracticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecycledViewPoolActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExpandableRecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExpandableListViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatRecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecyclerViewPracticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListViewPracticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WidgetsExerciseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DataBindingPracticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LayoutExerciseSignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LayoutExerciseHome"
+            android:exported="false" />
+        <activity
+            android:name=".LayoutExerciseLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StateListDrawableActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TabbarLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NavigationComponentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AppBarCustomizationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintChainAndGroupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CircularConstraintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FrameLayoutPractice"
+            android:exported="false" />
+        <activity
+            android:name=".AppBarLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RelativeLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AbsoluteLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LinearLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LayoutsHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomToastActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditTextTypesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MaterialViewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TextViews"
+            android:exported="false" />
+        <activity
+            android:name=".CustomSnackBarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WidgetsHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WidgetsOneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>
