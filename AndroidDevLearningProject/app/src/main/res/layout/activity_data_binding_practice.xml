@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.learningproject.DataBindingPracticeViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DataBindingMVVMPractice">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={viewmodel.name}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.name}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputOne" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOne"
+            android:text="@{viewmodel.age.toString()}"
+            app:textChange="@{viewmodel}"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputAge"
+            android:text="@{viewmodel.age.toString()}"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddOneToAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAge"
+            android:text="Add one to age"
+            android:textAllCaps="false"
+            android:layout_marginTop="20dp"
+            android:onClick="@{viewmodel::addOneToAge}"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPersonHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddOneToAge"
+            android:layout_marginTop="30dp"
+            android:text="Person Details Edit"
+            android:textSize="20sp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPersonHead"
+            android:layout_marginTop="10dp"
+            android:text="Edit name"
+            android:textSize="15sp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            android:text="@{viewmodel.person.name}"
+            app:personEdit="@{viewmodel}"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAgeHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editName"
+            android:layout_marginTop="10dp"
+            android:text="Edit age"
+            android:textSize="15sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editAge"
+            app:personEdit="@{viewmodel}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAgeHead"
+            android:text="@{String.valueOf(viewmodel.person.age)}"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPersonDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{viewmodel.person.toString()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editAge" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPersonDetails"
+            android:layout_marginTop="20dp"
+            android:text="Age > 18"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:goneUnless="@{viewmodel.person.age > 18 ? true : false}"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
