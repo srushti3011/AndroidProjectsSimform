@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="light_gray">#ADABAB</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#2E2ED3</color>
+    <color name="yellow">#FFE300</color>
+    <color name="layout_exe_button_color">#53B175</color>
+    <color name="layout_exe_subheading">#7C7C7C</color>
+    <color name="layout_exe_inputBottomBorder">#E2E2E2</color>
+    <color name="layout_exe_forgotPasswordColor">#181725</color>
+    <color name="custom_primary">#D00135</color>
+    <color name="custom_primary_variant">#FA89A6</color>
 </resources>
