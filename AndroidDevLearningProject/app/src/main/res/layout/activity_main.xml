@@ -229,6 +229,34 @@
                 android:textAllCaps="false"
                 android:text="Go To List, Recycler, ViewPager, BottomNav Exercise"/>
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToLifecycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToListRecyclerExercise"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go To Lifecycle observation Practice"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToStartActivityForResults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToLifecycle"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go To Start Activity For Results"/>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

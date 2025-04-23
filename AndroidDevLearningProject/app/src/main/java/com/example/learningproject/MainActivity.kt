@@ -2,6 +2,7 @@ package com.example.learningproject
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -96,5 +97,21 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ListRecyclerExerciseHomeActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnGoToLifecycle.setOnClickListener {
+            val intent = Intent(this, LifecycleObservationActivity::class.java)
+            intent.putExtra("value", "valueSent")
+            startActivity(intent)
+        }
+
+        binding.btnGoToStartActivityForResults.setOnClickListener {
+            val intent = Intent(this, IntentForResultActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i("observe", "main destroyed")
     }
 }
