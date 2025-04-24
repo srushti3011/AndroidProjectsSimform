@@ -108,6 +108,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, IntentForResultActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnGoToImplicitIntents.setOnClickListener {
+            val intent = Intent(this, ImplicitIntentsHomeActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onDestroy() {
