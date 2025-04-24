@@ -113,6 +113,21 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ImplicitIntentsHomeActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnGoToFragTransactionHome.setOnClickListener {
+            val intent = Intent(this, FragmentTransactionsHomeActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnGoToFlexibleUI.setOnClickListener {
+            val intent = Intent(this, FlexibleUIActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnGoToInterFragmentCommunication.setOnClickListener {
+            val intent = Intent(this, InterFragmentCommunicationActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onDestroy() {

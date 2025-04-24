@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentTransactionsHomeActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddFragOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Add Fragment One"
+        app:layout_constraintEnd_toStartOf="@+id/btnAddFragTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddFragTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Add Fragment Two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAddFragOne"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnReplaceOneTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Replace One With Two"
+        app:layout_constraintEnd_toStartOf="@+id/btnDetachTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddFragOne" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDetachTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detach Two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnReplaceOneTwo"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddFragTwo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRemoveTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove Two"
+        app:layout_constraintEnd_toStartOf="@+id/btnHideTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnReplaceOneTwo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnHideTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hide Two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnRemoveTwo"
+        app:layout_constraintTop_toBottomOf="@+id/btnDetachTwo" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRemoveTwo"
+        android:layout_marginTop="10dp"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/frag"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentContainer"
+        android:layout_marginTop="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

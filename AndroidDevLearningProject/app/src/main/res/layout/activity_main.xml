@@ -271,6 +271,48 @@
                 android:textAllCaps="false"
                 android:text="Go To Implicit Intents Home"/>
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToFragTransactionHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToImplicitIntents"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go To Fragment Transaction Home"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToFlexibleUI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToFragTransactionHome"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go To Flexible UI Activity"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToInterFragmentCommunication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToFlexibleUI"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go To Inter Fragment Communication"/>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
