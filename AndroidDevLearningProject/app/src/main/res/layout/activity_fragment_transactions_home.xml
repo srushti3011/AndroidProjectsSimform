@@ -63,22 +63,42 @@
         app:layout_constraintStart_toEndOf="@+id/btnRemoveTwo"
         app:layout_constraintTop_toBottomOf="@+id/btnDetachTwo" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPopOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PopOne"
+        app:layout_constraintEnd_toStartOf="@+id/btnAddMore"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRemoveTwo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AddMore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnPopOne"
+        app:layout_constraintTop_toBottomOf="@+id/btnRemoveTwo" />
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRemoveTwo"
-        android:layout_marginTop="10dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/btnPopOne" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/frag"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentContainer"
-        android:layout_marginTop="10dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/fragmentContainer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,7 +6,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commit
+import androidx.navigation.findNavController
 import com.example.learningproject.databinding.ActivityFragmentTransactionsHomeBinding
 
 class FragmentTransactionsHomeActivity : AppCompatActivity() {
@@ -30,28 +32,33 @@ class FragmentTransactionsHomeActivity : AppCompatActivity() {
         binding.btnAddFragOne.setOnClickListener {
             val transaction = supportFragManager.beginTransaction()
             transaction.add(R.id.fragmentContainer, fragmentOne, "one")
+                .addToBackStack("addedTwo")
+//                .addToBackStack("addedOne")
+                .commit()
+            Log.i("Transaction", "${supportFragManager.fragments}")
+        }
+// addedOne addedTwo addedOne
+
+//        1 same 2 same
+//        1 same same 2
+//        1 2 same same
+//        same 1 2
+//        same 1 same 2
+//        same same 1
+        binding.btnAddFragTwo.setOnClickListener {
+            val transaction = supportFragManager.beginTransaction()
+            transaction.add(R.id.fragmentContainer, fragmentTwo, "two")
+//                .addToBackStack("addedOne")
                 .addToBackStack("addedOne")
                 .commit()
             Log.i("Transaction", "${supportFragManager.fragments}")
         }
 
-        binding.btnAddFragTwo.setOnClickListener {
-            val transaction = supportFragManager.beginTransaction()
-            transaction.add(R.id.fragmentContainer, fragmentTwo, "two")
-                .addToBackStack("addedTwo")
-                .commit()
-            Log.i("Transaction", "${supportFragManager.fragments}")
-        }
-
-//        binding.btnAddFragTwo.setOnClickListener {
-//            val transaction = supportFragManager.beginTransaction()
-//            transaction.add(R.id.frag, fragmentOne, "two").addToBackStack("addedOne").commit()
-//            Log.i("Transaction", "${supportFragManager.fragments}")
-//        }
-
         binding.btnReplaceOneTwo.setOnClickListener {
             val transaction = supportFragManager.beginTransaction()
             transaction.replace(R.id.fragmentContainer, fragmentTwo)
+//                .addToBackStack("replacedOneWithTwo")
+                .addToBackStack("addedOne")
                 .commit()
             Log.i("Transaction", "${supportFragManager.fragments}")
         }
@@ -62,7 +69,7 @@ class FragmentTransactionsHomeActivity : AppCompatActivity() {
                 .commit()
             Log.i("Transaction", "${supportFragManager.fragments}")
         }
-
+// A B C B D
         binding.btnRemoveTwo.setOnClickListener {
             val transaction = supportFragManager.beginTransaction()
             transaction.remove(fragmentTwo)
@@ -74,7 +81,22 @@ class FragmentTransactionsHomeActivity : AppCompatActivity() {
             val transaction = supportFragManager.beginTransaction()
             transaction.hide(fragmentTwo)
                 .commit()
+            Log.i("Transaction", "${supportFragManager.backStackEntryCount}")
+        }
+
+        binding.btnPopOne.setOnClickListener {
             Log.i("Transaction", "${supportFragManager.fragments}")
+            supportFragManager.popBackStack("addedOne", FragmentManager.POP_BACK_STACK_INCLUSIVE)
+//            finishAffinity()
+        }
+
+        binding.btnAddMore.setOnClickListener {
+            val thirdFrag = ThirdFragment()
+            Log.i("Transaction", "${supportFragManager.fragments}")
+            val transaction = supportFragManager.beginTransaction()
+            transaction.add(R.id.fragmentContainer, thirdFrag)
+                .addToBackStack("addedThree")
+                .commit()
         }
     }
 }

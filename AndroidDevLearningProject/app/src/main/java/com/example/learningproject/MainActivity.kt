@@ -128,6 +128,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, InterFragmentCommunicationActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnGoToFragCommUseVM.setOnClickListener {
+            val intent = Intent(this, InterFragCommUsingVMActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onDestroy() {

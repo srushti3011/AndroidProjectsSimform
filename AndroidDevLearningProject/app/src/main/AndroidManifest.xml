@@ -13,6 +13,9 @@
         android:theme="@style/Theme.LearningProject"
         tools:targetApi="31">
         <activity
+            android:name=".InterFragCommUsingVMActivity"
+            android:exported="false" />
+        <activity
             android:name=".InterFragmentCommunicationActivity"
             android:exported="false" />
         <activity

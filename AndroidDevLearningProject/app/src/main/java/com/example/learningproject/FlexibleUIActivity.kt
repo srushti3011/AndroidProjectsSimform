@@ -6,6 +6,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import com.example.learningproject.databinding.ActivityFlexibleUiactivityBinding
 
 class FlexibleUIActivity : AppCompatActivity() {
@@ -13,6 +15,7 @@ class FlexibleUIActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFlexibleUiactivityBinding
     private val fragManager = supportFragmentManager
     private lateinit var btnFrag: OneTransactionFragment
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,5 +35,12 @@ class FlexibleUIActivity : AppCompatActivity() {
                 .add(R.id.fragContainer, btnFrag, "OneTransactionFragment")
             transaction.commit()
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        if (binding.landscapeSecondFrag != null) {
+            navController = findNavController(R.id.landscapeSecondFrag)
+        }
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }
