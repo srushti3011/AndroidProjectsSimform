@@ -327,6 +327,76 @@
                 android:textAllCaps="false"
                 android:text="Go To Inter Fragment Communication using ViewModel"/>
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToFragStartActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToFragCommUseVM"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go To Fragment Start Activity"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToServices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToFragStartActivity"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go To Services"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSendBoradcastToOtherApps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToServices"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Send broadcast to other apps"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLocalBroadcast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSendBoradcastToOtherApps"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Send local broadcast"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToLocalBroadcastActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnLocalBroadcast"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go to Local broadcast activity"/>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
