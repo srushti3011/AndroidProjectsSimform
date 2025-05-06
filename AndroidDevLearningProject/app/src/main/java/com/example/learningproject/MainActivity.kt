@@ -166,6 +166,32 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, CoffeeLandingActivity::class.java)
             startActivity(intent)
         }
+
+        binding.apply {
+            btnGoToNestedAndHorizontalScrollPractice.setOnClickListener {
+                val intent = Intent(
+                    this@MainActivity,
+                    NestedScrollViewPracticeActivity::class.java
+                )
+                startActivity(intent)
+            }
+
+            btnGoToWebViewPractice.setOnClickListener {
+                val intent = Intent(
+                    this@MainActivity,
+                    WebViewActivity::class.java
+                )
+                startActivity(intent)
+            }
+
+            btnGoToSearchViewPractice.setOnClickListener {
+                val intent = Intent(
+                    this@MainActivity,
+                    SearchViewActivity::class.java
+                )
+                startActivity(intent)
+            }
+        }
     }
 
     override fun onDestroy() {
