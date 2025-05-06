@@ -17,6 +17,20 @@
         android:theme="@style/Theme.LearningProject"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CoffeeDetailActivity"
+            android:exported="false"
+            android:parentActivityName=".CoffeeListActivity" />
+        <activity
+            android:name=".CoffeeListActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".CoffeeLandingActivity"
+            android:exported="false" />
+        <activity
             android:name=".LocalBroadcastActivity"
             android:exported="false" />
         <activity
@@ -202,7 +216,7 @@
             android:name=".WidgetsOneActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".DecidingFirstActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -221,9 +235,10 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <service android:name=".BackgroundService"
-         android:enabled="true"
-         android:exported="false" />
+        <service
+            android:name=".BackgroundService"
+            android:enabled="true"
+            android:exported="false" />
         <service
             android:name=".ForegroundService"
             android:enabled="true"

@@ -397,6 +397,20 @@
                 android:textAllCaps="false"
                 android:text="Go to Local broadcast activity"/>
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToActivityIntentFragmentExercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnLocalBroadcast"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go to Activities, Intents, Fragments, Exercise"/>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

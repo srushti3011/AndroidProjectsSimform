@@ -161,6 +161,11 @@ class MainActivity : AppCompatActivity() {
             val intentNav = Intent(this, LocalBroadcastActivity::class.java)
             startActivity(intentNav)
         }
+
+        binding.btnGoToActivityIntentFragmentExercise.setOnClickListener {
+            val intent = Intent(this, CoffeeLandingActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onDestroy() {
