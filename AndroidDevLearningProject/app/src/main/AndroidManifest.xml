@@ -18,6 +18,15 @@
         android:theme="@style/Theme.LearningProject"
         tools:targetApi="31">
         <activity
+            android:name=".WebViewExerciseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ScrollViewAndNestedScrollExerciseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchAndHorizontalScrollExerciseActivity"
+            android:exported="false" />
+        <activity
             android:name=".SearchViewActivity"
             android:exported="false" />
         <activity

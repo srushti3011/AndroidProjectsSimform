@@ -34,4 +34,5 @@
     <color name="coffee_detail_bg">#F9F9F9</color>
     <color name="size_button_selected_bg">#F8F0EB</color>
     <color name="category_not_selected">#F4F3F3</color>
+    <color name="profile_details_blue">#AFDCFF</color>
 </resources>

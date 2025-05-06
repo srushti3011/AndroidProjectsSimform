@@ -191,6 +191,30 @@ class MainActivity : AppCompatActivity() {
                 )
                 startActivity(intent)
             }
+
+            btnGoToSearchAndHorizontalSVExercise.setOnClickListener {
+                val intent = Intent(
+                    this@MainActivity,
+                    SearchAndHorizontalScrollExerciseActivity::class.java
+                )
+                startActivity(intent)
+            }
+
+            btnGoToScrollAndNestedSVExercise.setOnClickListener {
+                val intent = Intent(
+                    this@MainActivity,
+                    ScrollViewAndNestedScrollExerciseActivity::class.java
+                )
+                startActivity(intent)
+            }
+
+            btnGoToWebViewExercise.setOnClickListener {
+                val intent = Intent(
+                    this@MainActivity,
+                    WebViewExerciseActivity::class.java
+                )
+                startActivity(intent)
+            }
         }
     }
 

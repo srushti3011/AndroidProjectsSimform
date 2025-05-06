@@ -23,11 +23,51 @@
     <string name="coffee_rating">4.8</string>
     <string name="rating_num_people">(230)</string>
     <string name="coffee_description_heading">Description</string>
-    <string name="sample_coffee_description">A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the fo.. Read More</string>
+    <string name="sample_coffee_description">
+        A cappuccino is an approximately 150 ml (5 oz) beverage,
+        with 25 ml of espresso coffee and 85ml of fresh milk the fo.. Read More
+    </string>
     <string name="coffee_size_heading">Size</string>
     <string name="coffee_size_small">S</string>
     <string name="coffee_size_medium">M</string>
     <string name="coffee_size_large">L</string>
     <string name="coffee_price_heading">Price</string>
     <string name="coffee_buy_now_button">Buy Now</string>
+    <string name="user_profile_heading">User Profile details</string>
+    <string name="personal_detail_heading">Personal details</string>
+    <string name="user_profile_fullname_heading">Full name</string>
+    <string name="user_profile_fullname_value">First name Middle Name Last name</string>
+    <string name="user_profile_address_heading">Address</string>
+    <string name="user_profile_address_value">
+        Addess Line one\nAddress Line Two\nCity, State, Country
+    </string>
+    <string name="user_profile_dob_heading">Date of birth</string>
+    <string name="user_profile_dob_value">DD-MM-YYYY</string>
+    <string name="user_profile_blood_group_heading">Blood Group</string>
+    <string name="user_profile_blood_group_value">B+ve</string>
+    <string name="user_profile_educational_details_heading">Educational details</string>
+    <string name="user_profile_stdten_marks_heading">Std. 10 Marks</string>
+    <string name="user_profile_stdten_marks_value">91</string>
+    <string name="user_profile_stdtwelve_marks_heading">Std. 12 Marks</string>
+    <string name="user_profile_stdtwelve_marks_value">91</string>
+    <string name="user_profile_college_name_heading">College Name</string>
+    <string name="user_profile_college_name_value">College name</string>
+    <string name="user_profile_college_marks_heading">College marks</string>
+    <string name="user_profile_college_marks_value">89</string>
+    <string name="user_profile_professionaldetails_heading">Professional details</string>
+    <string name="company_one_name_heading">Company One Name</string>
+    <string name="company_one_value">Company One</string>
+    <string name="company_two_name_heading">Company Two Name</string>
+    <string name="company_two_value">Company Two</string>
+    <string name="company_three_name_heading">Company Three Name</string>
+    <string name="company_three_value">Company Three</string>
+    <string name="hsvexercise_remove_filter">Remove filter</string>
+    <string name="hsvexercise_price_greater_than_thousand">Price Greater than 1000</string>
+    <string name="hsvexercise_five_star_filter">5 Star</string>
+    <string name="hsvexercise_highest_price_filter">Highest price</string>
+    <string name="hsvexercise_most_liked_filter">Most liked</string>
+    <string name="product_item_productname">Book</string>
+    <string name="product_item_productprice">Rs. 500</string>
+    <string name="product_item_productrating">Rating - 5.2</string>
+    <string name="product_item_productlikes">Likes - 300</string>
 </resources>
