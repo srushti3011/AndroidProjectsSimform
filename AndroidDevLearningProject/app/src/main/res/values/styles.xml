@@ -25,4 +25,9 @@
         <item name="android:textSize">20sp</item>
         <item name="android:textAlignment">center</item>
     </style>
+    <style name="coffeeLocationDropdown" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:colorForeground">@color/white</item>
+        <item name="android:dropDownSelector">@drawable/baseline_arrow_drop_down_24</item>
+        <item name="dropDownBackgroundTint">@color/white</item>
+    </style>
 </resources>
