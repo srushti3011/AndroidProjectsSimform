@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.learningproject.WidgetExerciseViewModel" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ComponentsExercise">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvExerciseHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:hint=""
+                android:text="@string/exercise_screen_heading"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvExerciseHeading"
+                android:hint="@string/exercise_name_field_hint"
+                app:endIconMode="clear_text"
+                app:boxBackgroundMode="outline"
+                android:layout_marginTop="20dp"
+                app:boxBackgroundColor="?attr/colorSecondary"
+                app:errorEnabled="true"
+                style="@style/spacingAndMargin">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:fontFamily="@font/poppins_regular"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tilName"
+                android:hint="@string/exercise_email_field_hint"
+                app:boxBackgroundMode="outline"
+                android:layout_marginTop="5dp"
+                style="@style/spacingAndMargin"
+                app:errorEnabled="true"
+                app:boxBackgroundColor="?attr/colorSecondary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionNext"
+                    android:fontFamily="@font/poppins_regular"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/feedbackSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilEmail"
+                android:layout_marginTop="5dp"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/spinner_widgetexercise_bg"
+                style="@style/spacingAndMargin" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/feedbackSpinner"
+                android:hint="@string/exercise_feedback_field_hint"
+                android:layout_marginTop="5dp"
+                app:boxBackgroundMode="outline"
+                app:endIconMode="clear_text"
+                style="@style/spacingAndMargin"
+                app:boxBackgroundColor="?attr/colorSecondary"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietFeedbackDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:fontFamily="@font/poppins_regular"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkBoxSendResponse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/exercise_checkbox_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilFeedback"
+                android:layout_marginTop="5dp"
+                style="@style/spacingAndMargin"
+                android:buttonTint="?attr/colorPrimary"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSendResponse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/exercise_button_content"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBoxSendResponse"
+                style="@style/spacingAndMargin"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:buttonTint">@color/light_gray</item>
+        <item name="strokeColor">@color/light_gray</item>
+    </style>
+    <style name="CustomRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:buttonTint">@color/red</item>
+        <item name="strokeColor">@color/red</item>
+    </style>
+    <style name="spacingAndMargin">
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+    </style>
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="App.Custom.Heading" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="App.Custom.SubHeading" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="coffeeLocationDropdown" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:colorForeground">@color/white</item>
+        <item name="android:dropDownSelector">@drawable/baseline_arrow_drop_down_24</item>
+        <item name="dropDownBackgroundTint">@color/white</item>
+    </style>
+</resources>
