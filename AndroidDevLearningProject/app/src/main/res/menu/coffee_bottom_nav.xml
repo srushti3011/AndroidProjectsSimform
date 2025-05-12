@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/home"
+        android:id="@+id/coffeeHome"
+        android:title="Home" />
+    <item android:icon="@drawable/like"
+        android:id="@+id/coffeeLiked"
+        android:title="Like" />
+    <item android:icon="@drawable/bag"
+        android:id="@+id/coffeeCart"
+        android:title="Bag" />
+    <item android:icon="@drawable/notification"
+        android:id="@+id/coffeeNotification"
+        android:title="Notification" />
+</menu>
