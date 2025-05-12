@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CoffeeDetailActivity"
+    android:background="@color/white">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/coffee_detail_bg">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCoffee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/img_radius"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/coffee_one" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCoffeeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/sample_coffee_name"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgCoffee" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCoffeeDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/sample_coffee_type"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCoffeeName" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCoffeeDesc"
+                app:srcCompat="@drawable/star" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/coffee_rating"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imgStar"
+                app:layout_constraintStart_toEndOf="@+id/imgStar"
+                app:layout_constraintTop_toTopOf="@+id/imgStar" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRatingNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/rating_num_people"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvRating"
+                app:layout_constraintStart_toEndOf="@+id/tvRating"
+                app:layout_constraintTop_toTopOf="@+id/tvRating" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgFastDelivery"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="42dp"
+                android:background="@drawable/coffee_detail_btn_bg"
+                android:padding="8dp"
+                android:src="@drawable/fastdelivery"
+                app:layout_constraintBottom_toBottomOf="@+id/tvRating"
+                app:layout_constraintEnd_toStartOf="@+id/imgQualityBeans"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toEndOf="@+id/tvCoffeeName"
+                app:layout_constraintTop_toTopOf="@+id/tvCoffeeName" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgQualityBeans"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/coffee_detail_btn_bg"
+                android:padding="8dp"
+                android:src="@drawable/quality_beans"
+                app:layout_constraintBottom_toBottomOf="@+id/tvRating"
+                app:layout_constraintEnd_toStartOf="@+id/imgExtraMilk"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imgFastDelivery"
+                app:layout_constraintTop_toTopOf="@+id/tvCoffeeName" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgExtraMilk"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/coffee_detail_btn_bg"
+                android:padding="8dp"
+                android:src="@drawable/extra_milk"
+                app:layout_constraintBottom_toBottomOf="@+id/tvRating"
+                app:layout_constraintEnd_toEndOf="@+id/imgCoffee"
+                app:layout_constraintStart_toEndOf="@+id/imgQualityBeans"
+                app:layout_constraintTop_toTopOf="@+id/tvCoffeeName" />
+
+            <View
+                android:id="@+id/dividerLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="40dp"
+                android:background="@color/coffee_detail_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRating" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescriptionHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/coffee_description_heading"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerLine" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescriptionContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:lineSpacingExtra="5dp"
+                android:textSize="14sp"
+                android:text="@string/sample_coffee_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescriptionHeading" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnSizeHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/coffee_size_heading"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescriptionContent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSizeSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/coffee_size_small"
+                app:layout_constraintEnd_toStartOf="@+id/btnSizeMedium"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSizeHeading"
+                android:background="@drawable/coffeesize_btn_bg"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSizeMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/coffee_size_medium"
+                app:layout_constraintEnd_toStartOf="@+id/btnSizeLarge"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintStart_toEndOf="@+id/btnSizeSmall"
+                app:layout_constraintTop_toBottomOf="@+id/btnSizeHeading"
+                android:background="@drawable/coffeesize_btn_bg" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSizeLarge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/coffee_size_large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnSizeMedium"
+                app:layout_constraintTop_toBottomOf="@+id/btnSizeHeading"
+                android:background="@drawable/coffeesize_btn_bg" />
+
+            <View
+                android:id="@+id/bottomView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/coffee_detail_bottom_view_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSizeMedium" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPriceHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/coffee_price_heading"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/bottomView"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCoffeePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/sample_coffee_price"
+                android:textColor="@color/coffee_brown"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPriceHeading"
+                android:layout_marginBottom="12dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/coffee_landing_btn_getstarted"
+                android:text="@string/coffee_buy_now_button"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tvCoffeePrice"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvCoffeePrice"
+                app:layout_constraintTop_toTopOf="@+id/tvPriceHeading"
+                android:layout_marginStart="34dp"
+                android:layout_marginEnd="24dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
