@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">LearningProject</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="exercise_screen_heading">Enter feedback details to send to the developer:</string>
+    <string name="exercise_name_field_hint">Your name</string>
+    <string name="exercise_email_field_hint">Your email</string>
+    <string name="exercise_feedback_field_hint">Feedback Details...</string>
+    <string name="exercise_checkbox_content">Would you like an email response?</string>
+    <string name="exercise_button_content">Send Feedback</string>
+    <string name="title">Title</string>
+    <string name="subtitle">Subtitle</string>
+    <string name="coffee_landing_head_desc">Fall in Love with Coffee in Blissful Delight!</string>
+    <string name="coffee_landing_subhead_desc">Welcome to our cozy coffee corner, where every cup is a delightful for you.</string>
+    <string name="coffee_landing_btn">Get Started</string>
+    <string name="coffee_list_home_location_head">Location</string>
+    <string name="search_coffee_hint">Search Coffee</string>
+    <string name="promo_head">Promo</string>
+    <string name="coffee_offer_line_one">Buy one get</string>
+    <string name="coffee_offer_line_two">one FREE</string>
+    <string name="sample_coffee_name">Caffe Mocha</string>
+    <string name="sample_coffee_type">Deep Foam</string>
+    <string name="sample_coffee_price">$ 4.53</string>
+    <string name="coffee_rating">4.8</string>
+    <string name="rating_num_people">(230)</string>
+    <string name="coffee_description_heading">Description</string>
+    <string name="sample_coffee_description">A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the fo.. Read More</string>
+    <string name="coffee_size_heading">Size</string>
+    <string name="coffee_size_small">S</string>
+    <string name="coffee_size_medium">M</string>
+    <string name="coffee_size_large">L</string>
+    <string name="coffee_price_heading">Price</string>
+    <string name="coffee_buy_now_button">Buy Now</string>
 </resources>
