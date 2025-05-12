@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchAndHorizontalScrollExerciseActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <SearchView
+                android:id="@+id/searchProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <HorizontalScrollView
+                android:id="@+id/hsvFilters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/searchProduct"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnRemoveFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hsvexercise_remove_filter"
+                        android:background="@color/teal_200"
+                        android:textAllCaps="false" />
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnGreaterThanThousand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hsvexercise_price_greater_than_thousand"
+                        android:background="@color/teal_200"
+                        android:textAllCaps="false" />
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnFivestar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hsvexercise_five_star_filter"
+                        android:background="@color/teal_200"
+                        android:textAllCaps="false" />
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnHighestPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hsvexercise_highest_price_filter"
+                        android:background="@color/teal_200"
+                        android:textAllCaps="false" />
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnMostLiked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hsvexercise_most_liked_filter"
+                        android:background="@color/teal_200"
+                        android:textAllCaps="false" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/hsvFilters"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvProducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/product_item" />
+            </androidx.core.widget.NestedScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
