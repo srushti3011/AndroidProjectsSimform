@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ConstraintLayoutActivity" >
+
+    <Button
+        android:id="@+id/ButtonA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/ButtonB"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="B"
+        android:textAllCaps="false"
+        app:layout_constraintCircle="@id/ButtonA"
+        app:layout_constraintCircleAngle="0"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/ButtonC"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="C"
+        android:textAllCaps="false"
+        app:layout_constraintCircle="@id/ButtonA"
+        app:layout_constraintCircleAngle="30"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ButtonD"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="D"
+        android:textAllCaps="false"
+        app:layout_constraintCircle="@id/ButtonA"
+        app:layout_constraintCircleAngle="60"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ButtonE"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="E"
+        android:textAllCaps="false"
+        app:layout_constraintCircle="@id/ButtonA"
+        app:layout_constraintCircleAngle="90"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ButtonF"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="F"
+        android:textAllCaps="false"
+        app:layout_constraintCircle="@id/ButtonA"
+        app:layout_constraintCircleAngle="120"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ButtonG"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="G"
+        android:textAllCaps="false"
+        app:layout_constraintCircle="@id/ButtonA"
+        app:layout_constraintCircleAngle="150"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ButtonH"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="H"
+        android:textAllCaps="false"
+        app:layout_constraintCircle="@id/ButtonA"
+        app:layout_constraintCircleAngle="180"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ButtonI"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="I"
+        android:textAllCaps="false"
+        app:layout_constraintCircle="@id/ButtonA"
+        app:layout_constraintCircleAngle="210"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ButtonJ"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="J"
+        android:textAllCaps="false"
+        app:layout_constraintCircle="@id/ButtonA"
+        app:layout_constraintCircleAngle="240"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ButtonK"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="K"
+        android:textAllCaps="false"
+        app:layout_constraintCircle="@id/ButtonA"
+        app:layout_constraintCircleAngle="270"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ButtonL"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="L"
+        android:textAllCaps="false"
+        app:layout_constraintCircle="@id/ButtonA"
+        app:layout_constraintCircleAngle="300"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ButtonM"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="M"
+        android:textAllCaps="false"
+        app:layout_constraintCircle="@id/ButtonA"
+        app:layout_constraintCircleAngle="330"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
