@@ -7,185 +7,186 @@
     android:layout_height="match_parent"
     android:background="@color/coffee_list_bg"
     tools:context=".CoffeeHomeFragment">
-
-    <View
-        android:id="@+id/bannerTop"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@color/coffee_home_banner_bg"
-        app:layout_constraintBottom_toTopOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvLocationHeading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="68dp"
-            android:text="@string/coffee_list_home_location_head"
-            android:textColor="@color/coffee_landing_description_sub"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatSpinner
-            android:id="@+id/spinnerLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:dropDownSelector="@drawable/baseline_arrow_drop_down_24"
-            android:backgroundTint="@color/coffee_landing_description_sub"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvLocationHeading" />
-
-        <LinearLayout
-            android:id="@+id/searchContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerLocation"
-            android:paddingStart="10dp">
-
-            <androidx.appcompat.widget.AppCompatImageView
+            android:layout_height="wrap_content">
+            <View
+                android:id="@+id/bannerTop"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/coffee_home_banner_bg"
+                app:layout_constraintBottom_toTopOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLocationHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/magnify_glass" />
-
-            <Space
-                android:layout_width="5dp"
-                android:layout_height="match_parent" />
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:hint="@string/search_coffee_hint"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="68dp"
+                android:text="@string/coffee_list_home_location_head"
+                android:textColor="@color/coffee_landing_description_sub"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:dropDownSelector="@drawable/baseline_arrow_drop_down_24"
+                android:backgroundTint="@color/coffee_landing_description_sub"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLocationHeading" />
+            <LinearLayout
+                android:id="@+id/searchContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerLocation"
+                android:paddingStart="10dp">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/magnify_glass" />
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="0dp"
+                    android:focusable="true"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/search_coffee_hint"
+                    android:backgroundTint="@android:color/transparent"
+                    android:textColor="@color/white"
+                    android:textCursorDrawable="@drawable/coffee_search_cursor"
+                    android:textColorHint="@color/coffee_landing_description_sub" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/filet" />
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgBanner"
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/img_radius"
+                android:clipToOutline="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchContainer"
+                android:layout_marginTop="24dp"
+                app:srcCompat="@drawable/coffee_home_banneer" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPromo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/coffee_promo_label_bg"
+                android:padding="4dp"
+                android:text="@string/promo_head"
                 android:textColor="@color/white"
-                android:textColorHint="@color/coffee_landing_description_sub" />
-
-            <androidx.appcompat.widget.AppCompatImageView
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/imgBanner"
+                app:layout_constraintTop_toTopOf="@+id/imgBanner" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOfferLineOne"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/filet" />
-        </LinearLayout>
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imgBanner"
-        android:layout_width="match_parent"
-        android:layout_height="155dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/img_radius"
-        android:clipToOutline="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchContainer"
-        android:layout_marginTop="24dp"
-        app:srcCompat="@drawable/coffee_home_banneer" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvPromo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="17dp"
-        android:background="@drawable/coffee_promo_label_bg"
-        android:padding="4dp"
-        android:text="@string/promo_head"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/imgBanner"
-        app:layout_constraintTop_toTopOf="@+id/imgBanner" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvOfferLineOne"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:elevation="2dp"
-        android:letterSpacing="0.05"
-        android:text="@string/coffee_offer_line_one"
-        android:textColor="@color/white"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/imgBanner"
-        app:layout_constraintTop_toBottomOf="@+id/tvPromo" />
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="-5dp"
-        android:layout_marginBottom="-1dp"
-        android:background="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/tvOfferLineOne"
-        app:layout_constraintEnd_toEndOf="@+id/tvOfferLineOne"
-        app:layout_constraintStart_toStartOf="@+id/tvOfferLineOne"
-        app:layout_constraintTop_toTopOf="@+id/tvOfferLineOne" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvOfferLineTwo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="16dp"
-        android:elevation="2dp"
-        android:letterSpacing="0.05"
-        android:text="@string/coffee_offer_line_two"
-        android:textColor="@color/white"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/imgBanner"
-        app:layout_constraintTop_toBottomOf="@+id/tvOfferLineOne"
-        app:layout_constraintBottom_toBottomOf="@+id/imgBanner"/>
-
-    <View
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="-1dp"
-        android:background="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/tvOfferLineTwo"
-        app:layout_constraintEnd_toEndOf="@+id/tvOfferLineTwo"
-        app:layout_constraintStart_toStartOf="@+id/tvOfferLineTwo"
-        app:layout_constraintTop_toTopOf="@+id/tvOfferLineTwo" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCoffeeCategories"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:paddingStart="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBanner"
-        tools:listitem="@layout/coffee_category_cell" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCoffeeList"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rvCoffeeCategories"
-        tools:listitem="@layout/coffee_item_cell" />
-
+                android:layout_marginStart="24dp"
+                android:elevation="2dp"
+                android:letterSpacing="0.05"
+                android:text="@string/coffee_offer_line_one"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/imgBanner"
+                app:layout_constraintTop_toBottomOf="@+id/tvPromo" />
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="-5dp"
+                android:layout_marginBottom="-1dp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/tvOfferLineOne"
+                app:layout_constraintEnd_toEndOf="@+id/tvOfferLineOne"
+                app:layout_constraintStart_toStartOf="@+id/tvOfferLineOne"
+                app:layout_constraintTop_toTopOf="@+id/tvOfferLineOne" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOfferLineTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="2dp"
+                android:letterSpacing="0.05"
+                android:text="@string/coffee_offer_line_two"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/imgBanner"
+                app:layout_constraintTop_toBottomOf="@+id/tvOfferLineOne"
+                app:layout_constraintBottom_toBottomOf="@+id/imgBanner"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="-1dp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/tvOfferLineTwo"
+                app:layout_constraintEnd_toEndOf="@+id/tvOfferLineTwo"
+                app:layout_constraintStart_toStartOf="@+id/tvOfferLineTwo"
+                app:layout_constraintTop_toTopOf="@+id/tvOfferLineTwo" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCoffeeCategories"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:paddingStart="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgBanner"
+                tools:listitem="@layout/coffee_category_cell" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCoffeeList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvCoffeeCategories"
+                tools:listitem="@layout/coffee_item_cell" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
