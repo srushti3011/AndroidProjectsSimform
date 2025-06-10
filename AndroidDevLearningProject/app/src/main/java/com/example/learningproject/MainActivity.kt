@@ -215,6 +215,11 @@ class MainActivity : AppCompatActivity() {
                 )
                 startActivity(intent)
             }
+
+            btnGoToWebServicesPractice.setOnClickListener {
+                val intent = Intent(this@MainActivity, WebServicesPracticeHome::class.java)
+                startActivity(intent)
+            }
         }
     }
 
