@@ -20,7 +20,6 @@ class OkhttpApiService {
     companion object {
         val client = OkHttpClient.Builder()
             .connectTimeout(10, TimeUnit.SECONDS)
-            .addInterceptor(CustomInterceptor())
             .build()
     }
 
