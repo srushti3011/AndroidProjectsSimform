@@ -30,8 +30,8 @@ class RetrofitPracticeVM: ViewModel() {
         get() = mGetSingleUserResponse
 
     // defining the RetrofitApiState for Login Api
-    private val mLoginState = MutableLiveData<RetrofitApiState>(RetrofitApiState.Idle())
-    val loginState: LiveData<RetrofitApiState>
+    private val mLoginState = MutableLiveData<RetrofitApiStateNormal>(RetrofitApiStateNormal.Idle())
+    val loginState: LiveData<RetrofitApiStateNormal>
         get() = mLoginState
 
     fun getSingleUser() {
@@ -74,7 +74,7 @@ class RetrofitPracticeVM: ViewModel() {
     
     fun loginUser() {
         viewModelScope.launch {
-            mLoginState.value = RetrofitApiState.Loading()
+            mLoginState.value = RetrofitApiStateNormal.Loading()
             val apiResponse = apiRepo.userLogin(
                 UserLogin(
                     email = "eve.holt@reqres.in",
@@ -82,10 +82,10 @@ class RetrofitPracticeVM: ViewModel() {
                 )
             )
             when (apiResponse) {
-                is RetrofitApiState.Error -> {
+                is RetrofitApiStateNormal.Error -> {
                     mLoginState.value = apiResponse
                 }
-                is RetrofitApiState.Success<*> -> {
+                is RetrofitApiStateNormal.Success<*> -> {
                     mLoginState.value = apiResponse
                 }
                 else -> {}
@@ -94,32 +94,32 @@ class RetrofitPracticeVM: ViewModel() {
     }
 }
 
-sealed class RetrofitApiState {
-    class Idle: RetrofitApiState()
-    class Loading: RetrofitApiState()
-    data class Error(val errorType: ApiError): RetrofitApiState()
-    data class Success<T>(val data: T): RetrofitApiState()
+sealed class RetrofitApiStateNormal {
+    class Idle: RetrofitApiStateNormal()
+    class Loading: RetrofitApiStateNormal()
+    data class Error(val errorType: ApiErrorNormal): RetrofitApiStateNormal()
+    data class Success<T>(val data: T): RetrofitApiStateNormal()
 }
 
-sealed class ApiError {
+sealed class ApiErrorNormal {
     abstract val message: String
-    data class Exception(val e: kotlin.Exception): ApiError() {
+    data class Exception(val e: kotlin.Exception): ApiErrorNormal() {
         override val message: String
             get() = e.toString()
     }
-    class ServerError: ApiError() {
+    class ServerError: ApiErrorNormal() {
         override val message: String
             get() = "Sorry, there's some problem with the server"
     }
-    class SingleUserNotFound: ApiError() {
+    class SingleUserNotFound: ApiErrorNormal() {
         override val message: String
             get() = "User with the provided id not found, please recheck the id"
     }
-    class RegisterUnsuccessful(val errorMessage: String): ApiError() {
+    class RegisterUnsuccessful(val errorMessage: String): ApiErrorNormal() {
         override val message: String
             get() = this.errorMessage
     }
-    class LoginUnsuccessful(val errorMessage: String): ApiError() {
+    class LoginUnsuccessful(val errorMessage: String): ApiErrorNormal() {
         override val message: String
             get() = this.errorMessage
     }

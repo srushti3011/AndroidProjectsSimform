@@ -44,10 +44,10 @@ class RetrofitPracticeActivity : AppCompatActivity() {
                 val idleState = "Idle state"
                 val loadingState = "Loading state"
                 when (it) {
-                    is RetrofitApiState.Error -> tvLoginState.text = it.errorType.message
-                    is RetrofitApiState.Idle -> tvLoginState.text = idleState
-                    is RetrofitApiState.Loading -> tvLoginState.text = loadingState
-                    is RetrofitApiState.Success<*> -> tvLoginState.text = it.data.toString()
+                    is RetrofitApiStateNormal.Error -> tvLoginState.text = it.errorType.message
+                    is RetrofitApiStateNormal.Idle -> tvLoginState.text = idleState
+                    is RetrofitApiStateNormal.Loading -> tvLoginState.text = loadingState
+                    is RetrofitApiStateNormal.Success<*> -> tvLoginState.text = it.data.toString()
                 }
             }
         })
