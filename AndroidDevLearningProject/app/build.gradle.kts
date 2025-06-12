@@ -4,6 +4,8 @@ plugins {
     id("androidx.navigation.safeargs")
     alias(libs.plugins.kotlin.kapt)
     kotlin("plugin.serialization") version "1.9.24"
+    id("com.google.dagger.hilt.android")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -61,4 +63,6 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.retrofit2.kotlinx.serialization.converter)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
 }

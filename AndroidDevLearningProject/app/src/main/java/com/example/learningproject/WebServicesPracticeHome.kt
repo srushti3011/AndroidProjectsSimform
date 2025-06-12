@@ -55,6 +55,14 @@ class WebServicesPracticeHome : AppCompatActivity() {
                 )
                 startActivity(intent)
             }
+
+            btnGoToRetrofitPracticeWithInjection.setOnClickListener {
+                val intent = Intent(
+                    this@WebServicesPracticeHome,
+                    RetrofitWithInjectionActivity::class.java
+                )
+                startActivity(intent)
+            }
         }
     }
 }
