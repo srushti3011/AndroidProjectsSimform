@@ -70,4 +70,11 @@
     <string name="product_item_productprice">Rs. 500</string>
     <string name="product_item_productrating">Rating - 5.2</string>
     <string name="product_item_productlikes">Likes - 300</string>
+    <string name="WebServicesExerciseLoginHeading">Login</string>
+    <string name="WebServicesExerciseEmailHeading">Email</string>
+    <string name="WebServicesExerciseEmailHint">Enter your email</string>
+    <string name="WebServicesExercisePasswordHeading">Password</string>
+    <string name="WebServicesExercisePasswordHint">Enter your password</string>
+    <string name="WebServicesExerciseLoginButton">Login</string>
+    <string name="WebServicesExerciseCreateUserButton">Create user</string>
 </resources>
