@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WebServicesPracticeHome">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToHTTPURLConectionHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="5dp"
+                android:background="@color/category_not_selected"
+                android:text="Go To HTTPURLConnection"
+                android:textAllCaps="false"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToJsonParsingPractice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToHTTPURLConectionHome"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="5dp"
+                android:background="@color/category_not_selected"
+                android:text="Go To Json Parsing practice"
+                android:textAllCaps="false"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToOkhttpPractice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToJsonParsingPractice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="5dp"
+                android:background="@color/category_not_selected"
+                android:text="Go To Okhttp Practice"
+                android:textAllCaps="false"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToRetrofitPractice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToOkhttpPractice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="5dp"
+                android:background="@color/category_not_selected"
+                android:text="Go To Retrofit Practice"
+                android:textAllCaps="false"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

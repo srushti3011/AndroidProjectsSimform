@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("androidx.navigation.safeargs")
     alias(libs.plugins.kotlin.kapt)
+    kotlin("plugin.serialization") version "1.9.24"
 }
 
 android {
@@ -53,4 +54,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.gson)
+    implementation(libs.kotlinx.serialization.json.v163)
+    implementation(libs.okhttp)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.retrofit2.kotlinx.serialization.converter)
 }
