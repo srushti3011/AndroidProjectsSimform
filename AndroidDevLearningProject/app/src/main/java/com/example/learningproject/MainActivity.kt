@@ -217,8 +217,29 @@ class MainActivity : AppCompatActivity() {
             }
 
             btnGoToWebServicesPractice.setOnClickListener {
-                val intent = Intent(this@MainActivity, WebServicesPracticeHome::class.java)
+                val intent = Intent(
+                    this@MainActivity, WebServicesPracticeHome::class.java
+                )
                 startActivity(intent)
+            }
+
+            btnGoToWebServicesExerise.setOnClickListener {
+                val sharedPreferences = getSharedPreferences("UserPreference", MODE_PRIVATE)
+                val savedToken = sharedPreferences.getString("userToken", "")
+                if (savedToken != "") {
+                    if (savedToken != null) {
+                        Log.i("TAG", savedToken)
+                    }
+                    val intent = Intent(
+                        this@MainActivity, UserListActivity::class.java
+                    )
+                    startActivity(intent)
+                } else {
+                    val intent = Intent(
+                        this@MainActivity, WebServicesExerciseActivity::class.java
+                    )
+                    startActivity(intent)
+                }
             }
         }
     }
