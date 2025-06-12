@@ -65,4 +65,5 @@ dependencies {
     implementation(libs.retrofit2.kotlinx.serialization.converter)
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+    implementation(libs.glide)
 }
