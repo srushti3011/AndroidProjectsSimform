@@ -7,6 +7,9 @@ import okhttp3.Response
 import okhttp3.ResponseBody.Companion.toResponseBody
 
 class CustomInterceptor: Interceptor {
+    init {
+        Log.i("TAG", "In interceptor's init")
+    }
     override fun intercept(chain: Interceptor.Chain): Response {
         var priorResponse: Response
         Log.i("TAG", "Intercepting the request")
