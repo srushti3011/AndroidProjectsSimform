@@ -38,4 +38,10 @@ interface ApiInterface {
     suspend fun loginUser(
         @Body userLoginDetails: UserLogin
     ): Response<UserLoginResponse>
+
+    @Headers("x-api-key: reqres-free-v1", "Content-Type: application/json")
+    @GET("users")
+    suspend fun delayedResponse(
+        @Query("delay") delay: Int
+    ): Response<UserList>
 }
