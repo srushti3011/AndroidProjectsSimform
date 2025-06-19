@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import com.example.learningproject.architecture.mvc.view.MVCHomeActivity
+import com.example.learningproject.architecture.mvp.view.MVPHomeActivity
+import com.example.learningproject.architecture.mvvm.view.MVVMHomeActivity
 import com.example.learningproject.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -240,6 +243,21 @@ class MainActivity : AppCompatActivity() {
                     )
                     startActivity(intent)
                 }
+            }
+
+            btnGoToMVCHome.setOnClickListener {
+                val intent = Intent(this@MainActivity, MVCHomeActivity::class.java)
+                startActivity(intent)
+            }
+
+            btnGoToMVPHome.setOnClickListener {
+                val intent = Intent(this@MainActivity, MVPHomeActivity::class.java)
+                startActivity(intent)
+            }
+
+            btnGoToMVVMHome.setOnClickListener {
+                val intent = Intent(this@MainActivity, MVVMHomeActivity::class.java)
+                startActivity(intent)
             }
         }
     }

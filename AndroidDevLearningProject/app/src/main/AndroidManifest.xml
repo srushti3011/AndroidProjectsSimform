@@ -19,6 +19,15 @@
         android:theme="@style/Theme.LearningProject"
         tools:targetApi="31">
         <activity
+            android:name=".architecture.mvvm.view.MVVMHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".architecture.mvp.view.MVPHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".architecture.mvc.view.MVCHomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".UserDetailFromAPIActivity"
             android:exported="false" />
         <activity

@@ -523,6 +523,48 @@
                 android:textAllCaps="false"
                 android:text="Go to Web Services Exercise"/>
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToMVCHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToWebServicesExerise"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go to MVC"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToMVPHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToMVCHome"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go to MVP"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToMVVMHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToMVPHome"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:text="Go to MVVM"/>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
