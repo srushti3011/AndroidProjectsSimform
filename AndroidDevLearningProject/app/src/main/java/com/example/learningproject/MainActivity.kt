@@ -259,6 +259,11 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this@MainActivity, MVVMHomeActivity::class.java)
                 startActivity(intent)
             }
+
+            btnGoToPermissionsHome.setOnClickListener {
+                val intent = Intent(this@MainActivity, PermissionsHomeActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 
