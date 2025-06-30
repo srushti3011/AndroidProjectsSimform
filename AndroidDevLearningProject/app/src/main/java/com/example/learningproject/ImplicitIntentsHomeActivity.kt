@@ -2,6 +2,7 @@ package com.example.learningproject
 
 import android.app.Activity
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.ImageDecoder
 import android.net.Uri
 import android.os.Build
@@ -11,6 +12,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -88,7 +91,19 @@ class ImplicitIntentsHomeActivity : AppCompatActivity() {
             imageURI = uri
         }
         binding.btnCapturePhoto.setOnClickListener {
-            cameraLauncher.launch(imageURI)
+            if (
+                ContextCompat.checkSelfPermission(
+                    this,
+                    android.Manifest.permission.CAMERA
+                ) == PackageManager.PERMISSION_GRANTED) {
+                cameraLauncher.launch(imageURI)
+            } else {
+                ActivityCompat.requestPermissions(
+                    this,
+                    arrayOf(android.Manifest.permission.CAMERA),
+                    200
+                )
+            }
         }
 
         binding.btnCall.setOnClickListener {
@@ -111,6 +126,17 @@ class ImplicitIntentsHomeActivity : AppCompatActivity() {
                 val uri = intent.getParcelableExtra(Intent.EXTRA_STREAM, Uri::class.java)
                 binding.imgCapturedImage.setImageURI(uri)
             }
+        }
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == 200) {
+            cameraLauncher.launch(imageURI)
         }
     }
 }
