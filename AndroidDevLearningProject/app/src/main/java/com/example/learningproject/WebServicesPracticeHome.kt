@@ -3,6 +3,7 @@ package com.example.learningproject
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -11,6 +12,7 @@ import com.example.learningproject.databinding.ActivityWebServicesPracticeHomeBi
 class WebServicesPracticeHome : AppCompatActivity() {
 
     private lateinit var binding: ActivityWebServicesPracticeHomeBinding
+    val viewModel: WebServicesPracticeHomeViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,6 +64,14 @@ class WebServicesPracticeHome : AppCompatActivity() {
                     RetrofitWithInjectionActivity::class.java
                 )
                 startActivity(intent)
+            }
+
+            btnFireParallelApiCalls.setOnClickListener {
+                viewModel.makeParallelCalls()
+            }
+
+            btnMakeSequentialCalls.setOnClickListener {
+                viewModel.makeSequentialCalls()
             }
         }
     }
